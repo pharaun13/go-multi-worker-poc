@@ -1,17 +1,3 @@
-
-type itest interface {
-	bla(string)
-}
-
-type test struct {
-	name string
-}
-
-func (t test) bla (name string) {
-
-}
-
-
 package main
 
 import (
