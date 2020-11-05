@@ -5,7 +5,6 @@ import (
 	"github.com/streadway/amqp"
 	"reflect"
 	"time"
-	_"time"
 )
 
 type poolEntry struct {
@@ -89,7 +88,7 @@ func execute (messagePool []poolEntry) {
 func handle(command *amqp.Delivery) {
 	fmt.Printf("message body: %s", command.Body)
 	fmt.Println()
-	//time.Sleep(100*time.Millisecond)
+	time.Sleep(10*time.Millisecond)
 	command.Ack(false)
 }
 
